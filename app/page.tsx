@@ -234,13 +234,8 @@ export default function HomePage() {
       </header>
 
       {/* Current View */}
-      {/* <main className="container mx-auto">
-        <CurrentComponent />
-      </main> */}
       <main className="container mx-auto">
-        {Object.entries(views).map(([key, { component: Component, title, category }]) => (
-          <Component />
-        ))}
+        <CurrentComponent />
       </main>
     </div>
   )
