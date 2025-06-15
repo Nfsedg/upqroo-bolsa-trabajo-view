@@ -51,6 +51,12 @@ const PlaceholderView = ({ title }: { title: string }) => (
   </div>
 )
 
+type ViewEntry = {
+  component: React.ComponentType<any>;
+  title: string;
+  category: string;
+};
+
 type ViewType =
   | "landing"
   | "login"
@@ -74,7 +80,7 @@ type ViewType =
   | "user-management"
   | "system-config"
 
-const views = {
+const views: Record<string, ViewEntry> = {
   // General views
   landing: { component: LandingPage, title: "Página Principal", category: "General" },
   login: { component: LoginPage, title: "Iniciar Sesión", category: "General" },
@@ -228,8 +234,13 @@ export default function HomePage() {
       </header>
 
       {/* Current View */}
-      <main className="container mx-auto">
+      {/* <main className="container mx-auto">
         <CurrentComponent />
+      </main> */}
+      <main className="container mx-auto">
+        {Object.entries(views).map(([key, { component: Component, title, category }]) => (
+          <Component />
+        ))}
       </main>
     </div>
   )
