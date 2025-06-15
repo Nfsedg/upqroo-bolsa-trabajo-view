@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Blanco crema claro */
+    --foreground: 0 100% 15%; /* Rojo granate oscuro */
+    --card: 0 0% 99%; /* Blanco crema */
+    --card-foreground: 0 100% 15%; /* Rojo granate oscuro */
+    --popover: 0 0% 99%; /* Blanco crema */
+    --popover-foreground: 0 100% 15%; /* Rojo granate oscuro */
+    --primary: 0 100% 15%; /* #4C0000 - Rojo granate */
+    --primary-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --secondary: 24 100% 50%; /* #FF6400 - Naranja */
+    --secondary-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --muted: 60 5% 96%; /* Derivado del blanco crema */
+    --muted-foreground: 0 100% 15%; /* Rojo granate oscuro */
+    --accent: 34 100% 50%; /* #FF8F00 - Naranja dorado */
+    --accent-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --destructive: 0 64% 27%; /* #711919 - Rojo oscuro */
+    --destructive-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --border: 60 5% 90%; /* Gris claro derivado */
+    --input: 60 5% 90%; /* Gris claro derivado */
+    --ring: 0 100% 15%; /* Rojo granate */
+    --radius: 0.5rem;
+
+    /* Sidebar colors usando la nueva paleta */
+    --sidebar-background: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --sidebar-foreground: 0 100% 15%; /* #4C0000 - Rojo granate */
+    --sidebar-primary: 0 100% 15%; /* #4C0000 - Rojo granate */
+    --sidebar-primary-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --sidebar-accent: 24 100% 50%; /* #FF6400 - Naranja */
+    --sidebar-accent-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --sidebar-border: 60 5% 90%; /* Gris claro derivado */
+    --sidebar-ring: 0 100% 15%; /* #4C0000 - Rojo granate */
+  }
+
+  .dark {
+    --background: 0 100% 8%; /* Rojo granate muy oscuro */
+    --foreground: 60 100% 98%; /* Blanco crema */
+    --card: 0 100% 10%; /* Rojo granate oscuro */
+    --card-foreground: 60 100% 98%; /* Blanco crema */
+    --popover: 0 100% 10%; /* Rojo granate oscuro */
+    --popover-foreground: 60 100% 98%; /* Blanco crema */
+    --primary: 60 100% 98%; /* Blanco crema */
+    --primary-foreground: 0 100% 15%; /* Rojo granate */
+    --secondary: 24 100% 50%; /* #FF6400 - Naranja */
+    --secondary-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --muted: 0 64% 20%; /* Rojo oscuro derivado */
+    --muted-foreground: 60 100% 90%; /* Blanco crema claro */
+    --accent: 34 100% 50%; /* #FF8F00 - Naranja dorado */
+    --accent-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --destructive: 0 64% 40%; /* Rojo más claro para modo oscuro */
+    --destructive-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --border: 0 64% 20%; /* Rojo oscuro derivado */
+    --input: 0 64% 20%; /* Rojo oscuro derivado */
+    --ring: 60 100% 98%; /* Blanco crema */
+
+    /* Sidebar colors para modo oscuro */
+    --sidebar-background: 0 100% 10%; /* Rojo granate oscuro */
+    --sidebar-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --sidebar-primary: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --sidebar-primary-foreground: 0 100% 15%; /* #4C0000 - Rojo granate */
+    --sidebar-accent: 24 100% 50%; /* #FF6400 - Naranja */
+    --sidebar-accent-foreground: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+    --sidebar-border: 0 64% 20%; /* Rojo oscuro derivado */
+    --sidebar-ring: 60 100% 98%; /* #FFFFF9 - Blanco crema */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Estilos personalizados para la paleta UPQROO */
+.bg-upqroo-primary {
+  background-color: #4c0000;
+}
+
+.bg-upqroo-secondary {
+  background-color: #ff6400;
+}
+
+.bg-upqroo-accent {
+  background-color: #ff8f00;
+}
+
+.bg-upqroo-dark {
+  background-color: #711919;
+}
+
+.bg-upqroo-light {
+  background-color: #fffff9;
+}
+
+.text-upqroo-primary {
+  color: #4c0000;
+}
+
+.text-upqroo-secondary {
+  color: #ff6400;
+}
+
+.text-upqroo-accent {
+  color: #ff8f00;
+}
+
+.text-upqroo-dark {
+  color: #711919;
+}
+
+.text-upqroo-light {
+  color: #fffff9;
+}
